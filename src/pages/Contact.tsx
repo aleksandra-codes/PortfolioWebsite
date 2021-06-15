@@ -1,11 +1,12 @@
-import React from 'react';
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
-    return (
-        <div>
-            Contact
-        </ div>
-    );
+  const { t } = useTranslation();
+  return (
+    <div>
+      <h1>{t("contact")}</h1>
+    </div>
+  );
 };
 
 export default Contact;

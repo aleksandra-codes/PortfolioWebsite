@@ -1,9 +1,10 @@
-import React from 'react';
+import { useTranslation } from "react-i18next";
 
 const NotFound = () => {
+    const { t } = useTranslation();
     return (
         <>
-            <div>You have landed on non existent page</div>
+            <h1>{t("notfound")}</h1>
         </>
     );
 };

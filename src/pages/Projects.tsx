@@ -1,13 +1,12 @@
-import React from 'react';
+import { useTranslation } from "react-i18next";
 
 const Projects = () => {
-    return (
-        <>
-            <div>
-                Projects
-            </div>
-        </>
-    );
+  const { t } = useTranslation();
+  return (
+    <>
+      <h1>{t("projects")}</h1>
+    </>
+  );
 };
 
 export default Projects;

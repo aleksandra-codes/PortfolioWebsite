@@ -13,11 +13,13 @@ const App = () => {
     <Router>
       <Navbar />
       <Switch>
-        <Route path="/" component={Home} />
+        
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
         <Route path="/projects" component={Projects} />
+        <Route path="/" component={Home} />
         <Route path="*" component={NotFound} />
+        
       </Switch>
     </Router>
   );

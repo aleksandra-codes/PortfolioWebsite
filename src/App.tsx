@@ -1,26 +1,34 @@
 import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import Home from "./pages/Home";
-import Projects from "./pages/Projects";
-import NotFound from "./pages/NotFound";
+import About from "./sections/About";
+import Contact from "./sections/Contact";
+import Home from "./sections/Home";
+import Projects from "./sections/Projects";
+import NotFound from "./sections/NotFound";
 import Navbar from "./navigation/Navbar";
 import "./i18n";
+import { AppBar } from "@material-ui/core";
+
+const renderSections = () => {
+  return (
+    <>
+        <Navbar />
+        <Home />
+      <About />
+      <Projects />
+      <Contact />
+    </>
+  );
+};
 
 const App = () => {
   return (
     <Router>
-      <Navbar />
-      <Switch>
-        
-        <Route path="/about" component={About} />
+      {/* <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
-        <Route path="/projects" component={Projects} />
-        <Route path="/" component={Home} />
-        <Route path="*" component={NotFound} />
-        
-      </Switch>
+        <Route path="/projects" component={Projects} /> */}
+      <Route path="/" render={renderSections} />
+      <Route render={() => NotFound} />
     </Router>
   );
 };

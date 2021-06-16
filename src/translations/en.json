@@ -3,5 +3,6 @@
     "aboutme": "About Me",
     "contact": "Contact",
     "projects": "Projects", 
-    "notfound": "Not Found"
+    "notfound": "Not Found", 
+    "loading": "Loading..."
 }

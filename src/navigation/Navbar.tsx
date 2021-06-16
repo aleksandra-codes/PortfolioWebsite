@@ -1,29 +1,19 @@
+import { AppBar, Toolbar } from "@material-ui/core";
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import LanguageChange from "./LanguageChange";
 
 const Navbar = () => {
   const { t } = useTranslation();
   return (
-    <nav>
-      <NavLink className="navLink" activeClassName="active" to="/">
-        {t("home")}
-      </NavLink>
-      <NavLink className="navLink" activeClassName="active" to="/about">
-        {t("aboutme")}
-      </NavLink>
-      <NavLink className="navLink" activeClassName="active" to="/projects">
-        {t("projects")}
-      </NavLink>
-      <NavLink className="navLink" activeClassName="active" to="/contact">
-        {t("contact")}
-      </NavLink>
-      <div>
-        {" "}
+      <Toolbar>
+        <Link to="/">{t("home")}</Link>
+        <Link to="/about">{t("aboutme")}</Link>
+        <Link to="/projects">{t("projects")}</Link>
+        <Link to="/contact">{t("contact")}</Link>
         <LanguageChange />
-      </div>
-    </nav>
+      </Toolbar>
   );
 };
 

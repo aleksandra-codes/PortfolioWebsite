@@ -3,5 +3,6 @@
     "aboutme": "Sobre mi",
     "contact": "Contacto",
     "projects": "Proyectos", 
-    "notfound": "Extraviado"
+    "notfound": "Extraviado",
+    "loading": "Cargando..."
 }

@@ -7,13 +7,12 @@ import Projects from "./sections/Projects";
 import NotFound from "./sections/NotFound";
 import Navbar from "./navigation/Navbar";
 import "./i18n";
-import { AppBar } from "@material-ui/core";
 
 const renderSections = () => {
   return (
     <>
-        <Navbar />
-        <Home />
+      <Navbar />
+      <Home />
       <About />
       <Projects />
       <Contact />

@@ -6,11 +6,10 @@ import {
   Typography,
   useScrollTrigger,
 } from "@material-ui/core";
-import React from "react";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
 import LanguageChange from "./LanguageChange";
 import PropTypes from "prop-types";
+
 
 const useStyles = makeStyles((theme) => ({
   menuButton: {
@@ -44,21 +43,47 @@ HideOnScroll.propTypes = {
   window: PropTypes.func,
 };
 
-const Navbar = (props: any) => {
+
+
+
+interface NavbarProps {}
+
+const Navbar = (props: NavbarProps) => {
   const { t } = useTranslation();
   const classes = useStyles();
   return (
     <HideOnScroll {...props}>
       <AppBar position="sticky">
         <Toolbar>
+          {/* <Typography variant="h6" className={classes.title}> */}
+            {/* <NavLink to="projects">{t("home")} </NavLink>
+             */}
+            {/* <Scroll
+              to="example-destination"
+              spy={true}
+              smooth={true}
+              duration={500}
+              className="some-class"
+              activeClass="some-active-class"
+            >
+              Link Text Goes Here
+            </Scroll> */}
+          {/* </Typography> */}
           <Typography variant="h6" className={classes.title}>
-            <Link to="/">{t("home")}</Link>
+            <a
+              href="#about"
+            >
+              {t("aboutme")}
+            </a>
           </Typography>
           <Typography variant="h6" className={classes.title}>
-            <Link to="/about">{t("aboutme")}</Link>
+            <a href="#projects">{t("projects")}</a>
           </Typography>
-          <Link to="/projects">{t("projects")}</Link>
-          <Link to="/contact">{t("contact")}</Link>
+
+          <Typography variant="h6" className={classes.title}>
+            <a href="#contact">{t("contact")}</a>
+          </Typography>
+
           <LanguageChange />
         </Toolbar>
       </AppBar>

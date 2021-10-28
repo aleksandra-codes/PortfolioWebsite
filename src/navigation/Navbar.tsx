@@ -77,6 +77,13 @@ const Navbar = (props: NavbarProps) => {
             </a>
           </Typography>
           <Typography variant="h6" className={classes.title}>
+            <a
+              href="#about"
+            >
+              {t("aboutme")}
+            </a>
+          </Typography>
+          <Typography variant="h6" className={classes.title}>
             <a href="#projects">{t("projects")}</a>
           </Typography>
 

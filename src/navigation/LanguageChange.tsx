@@ -40,7 +40,7 @@ const LanguageChange = () => {
   }
 
   return (
-    <div>
+    <>
       <Button
         aria-controls="simple-menu"
         aria-haspopup="true"
@@ -59,7 +59,7 @@ const LanguageChange = () => {
         <MenuItem onClick={() => changeLanguage("es")}><Avatar alt="Spanish" src={espFlag} /></MenuItem>
         <MenuItem onClick={() => changeLanguage("ru")}><Avatar alt="Russian" src={ruFlag} /></MenuItem>
       </Menu>
-    </div>
+    </>
   );
 };
 

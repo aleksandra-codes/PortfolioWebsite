@@ -5,7 +5,6 @@ import Home from "./sections/Home";
 import Projects from "./sections/Projects";
 import "./SectionsPage.scss"
 
-
 export default function SectionsPage() {
 
   return (

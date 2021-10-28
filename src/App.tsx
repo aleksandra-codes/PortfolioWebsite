@@ -2,7 +2,6 @@
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import NotFound from "./sections/NotFound";
 import "./i18n";
-import MainContent from "./MainContent";
 import SectionsPage from "./SectionsPage";
 
 

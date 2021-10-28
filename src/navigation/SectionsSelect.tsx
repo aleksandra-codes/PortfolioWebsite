@@ -8,17 +8,32 @@ import Avatar from "@material-ui/core/Avatar";
 import cadFlag from '../images/en.png';
 import espFlag from '../images/es.png';
 import ruFlag from '../images/ru.png';
+import {
+    AppBar,
+    makeStyles,
+    Slide,
+    Toolbar,
+    Typography,
+    useScrollTrigger,
+  } from "@material-ui/core";
+  import MenuIcon from '@material-ui/icons/Menu'
 
 
+const SectionsSelect = () => {
 
-const LanguageChange = () => {
-  const { t, i18n } = useTranslation();
+    const useStyles = makeStyles((theme) => ({
+    menuButton: {
+        marginRight: theme.spacing(2),
+    },
+    title: {
+        flexGrow: 1,
+    },
+    }));
+    const { t } = useTranslation();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [curFlag, setCurFlag] = React.useState("en");
 
-  const changeLanguage = (language: any) => {
-    i18n.changeLanguage(language);
-    setCurFlag(language)
+  const changeSection = (section: any) => {
     handleClose()
   };
 
@@ -40,6 +55,8 @@ const LanguageChange = () => {
     }
   }
 
+
+  const classes = useStyles();
   return (
     <>
       <Button
@@ -47,7 +64,7 @@ const LanguageChange = () => {
         aria-haspopup="true"
         onClick={handleClick}
       >
-        {showSelectedLanguage()}
+          <MenuIcon/>
       </Button>
       <Menu
         id="simple-menu"
@@ -56,14 +73,26 @@ const LanguageChange = () => {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <MenuItem onClick={() => changeLanguage("en")}><Avatar alt="Spanish" src={cadFlag} /></MenuItem>
-        <MenuItem onClick={() => changeLanguage("es")}><Avatar alt="Spanish" src={espFlag} /></MenuItem>
-        <MenuItem onClick={() => changeLanguage("ru")}><Avatar alt="Russian" src={ruFlag} /></MenuItem>
+          <Typography variant="h6" className={classes.title}>
+            <a
+              href="#about"
+            >
+              {t("aboutme")}
+            </a>
+          </Typography>
+          <Typography variant="h6" className={classes.title}>
+            <a href="#projects">{t("projects")}</a>
+          </Typography>
+
+          <Typography variant="h6" className={classes.title}>
+            <a href="#contact">{t("contact")}</a>
+          </Typography>
+        
       </Menu>
     </>
   );
 };
 
-export default LanguageChange;
+export default SectionsSelect;
 
 {/* <Avatar alt="English" src="../images/en.png" /> */}

@@ -9,6 +9,7 @@ import {
 import { useTranslation } from "react-i18next";
 import LanguageChange from "./LanguageChange";
 import PropTypes from "prop-types";
+import SectionsSelect from "./SectionsSelect";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -69,14 +70,7 @@ const Navbar = (props: NavbarProps) => {
               Link Text Goes Here
             </Scroll> */}
           {/* </Typography> */}
-          <Typography variant="h6" className={classes.title}>
-            <a
-              href="#about"
-            >
-              {t("aboutme")}
-            </a>
-          </Typography>
-          <Typography variant="h6" className={classes.title}>
+          {/* <Typography variant="h6" className={classes.title}>
             <a
               href="#about"
             >
@@ -89,7 +83,8 @@ const Navbar = (props: NavbarProps) => {
 
           <Typography variant="h6" className={classes.title}>
             <a href="#contact">{t("contact")}</a>
-          </Typography>
+          </Typography> */}
+          <SectionsSelect />
 
           <LanguageChange />
         </Toolbar>

@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import ScrollTopArrow from "../navigation/ScrollTopArrow";
+import "./css/About.css"
 
 
 

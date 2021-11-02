@@ -47,7 +47,9 @@ HideOnScroll.propTypes = {
 
 
 
-interface NavbarProps {}
+interface NavbarProps {
+
+}
 
 const Navbar = (props: NavbarProps) => {
   const { t } = useTranslation();

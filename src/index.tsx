@@ -3,11 +3,15 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import { ThemeProvider } from "@material-ui/core";
+import theme from './themes/darkTheme'
 
 ReactDOM.render(
   <React.StrictMode>
       <Suspense fallback={<div>Loading...</div>}>
-        <App />
+        <ThemeProvider theme={theme}>
+          <App />
+        </ThemeProvider>
       </Suspense>
   </React.StrictMode>,
   document.getElementById("root")

@@ -3,27 +3,24 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import NotFound from "./sections/NotFound";
 import "./i18n";
 import SectionsPage from "./SectionsPage";
-import About from "./sections/About";
-import Contact from "./sections/Contact";
-import Projects from "./sections/Projects";
-import Navbar from "./navigation/Navbar";
-import Home from "./sections/Home";
-
+import lightTheme from './themes/lightTheme'
+import { useContext, useState } from "react";
+import ThemeContextProvider, { ThemeContext } from "./context/ThemeContext";
+import { ThemeProvider } from "@material-ui/styles";
+import darkTheme from "./themes/darkTheme";
 
 const App = () => {
-
-
+  const {isLightTheme} = useContext(ThemeContext);
+  
   return (
-    <Router>
-      {/* <Route path="/" component={Navbar} />
-      <Route path="/about" component={About} />
-      <Route path="/home" component={Home} />
-      <Route path="/contact" component={Contact} />
-      <Route path="/projects" component={Projects} />
-      <Route render={() => NotFound} />  */}
-      <Route path="/" component={SectionsPage} />
-      <Route render={() => NotFound} />
-    </Router>
+    <ThemeContextProvider>
+      <ThemeProvider theme={isLightTheme ? lightTheme : darkTheme}>
+      <Router>
+        <Route path="/" component={SectionsPage} />
+        <Route render={() => NotFound} />
+      </Router>
+      </ThemeProvider>
+    </ThemeContextProvider>
   );
 };
 

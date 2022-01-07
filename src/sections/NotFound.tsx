@@ -1,10 +1,11 @@
+import { Typography } from "@material-ui/core";
 import { useTranslation } from "react-i18next";
 
 const NotFound = () => {
   const { t } = useTranslation();
   return (
     <>
-      <h1>{t("notfound")}</h1>
+      <Typography variant="h3">{t("notfound")}</Typography>
     </>
   );
 };

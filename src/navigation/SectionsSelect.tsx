@@ -16,7 +16,6 @@ import {
     Typography,
     useScrollTrigger,
   } from "@material-ui/core";
-  import MenuIcon from '@material-ui/icons/Menu'
 
 
 const SectionsSelect = () => {
@@ -28,8 +27,20 @@ const SectionsSelect = () => {
     title: {
         flexGrow: 1,
     },
+    link: {
+        textDecoration: "none",
+        opacity: 0.75,
+        color: "#fff",
+        cursor: "pointer",
+        '&:hover': {
+          opacity: 1
+        }
+    },
+
     }));
-    const { t } = useTranslation();
+  
+  
+  const { t } = useTranslation();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [curFlag, setCurFlag] = React.useState("en");
 
@@ -57,9 +68,10 @@ const SectionsSelect = () => {
 
 
   const classes = useStyles();
+
   return (
     <>
-      <Button
+      {/* <Button
         aria-controls="simple-menu"
         aria-haspopup="true"
         onClick={handleClick}
@@ -72,23 +84,28 @@ const SectionsSelect = () => {
         keepMounted
         open={Boolean(anchorEl)}
         onClose={handleClose}
-      >
+      > */}
           <Typography variant="h6" className={classes.title}>
             <a
               href="#about"
+              className={classes.link}
             >
               {t("aboutme")}
             </a>
           </Typography>
           <Typography variant="h6" className={classes.title}>
-            <a href="#projects">{t("projects")}</a>
+            <a href="#projects"
+            className={classes.link}
+            >{t("projects")}</a>
           </Typography>
 
           <Typography variant="h6" className={classes.title}>
-            <a href="#contact">{t("contact")}</a>
+            <a href="#contact"
+            className={classes.link}
+            >{t("contact")}</a>
           </Typography>
         
-      </Menu>
+      {/* </Menu> */}
     </>
   );
 };

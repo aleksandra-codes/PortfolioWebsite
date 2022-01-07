@@ -1,26 +1,33 @@
-// import "./App.scss";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import NotFound from "./sections/NotFound";
 import "./i18n";
 import SectionsPage from "./SectionsPage";
-import lightTheme from './themes/lightTheme'
-import { useContext, useState } from "react";
-import ThemeContextProvider, { ThemeContext } from "./context/ThemeContext";
-import { ThemeProvider } from "@material-ui/styles";
-import darkTheme from "./themes/darkTheme";
+import { useState } from "react";
+
+import lightTheme from './themes/lightTheme' ;
+import darkTheme from './themes/darkTheme';
+import { Theme, ThemeProvider } from "@mui/material/styles";
+
 
 const App = () => {
-  const {isLightTheme} = useContext(ThemeContext);
   
+  const [theme, setTheme] = useState<Theme>(lightTheme);
+  const toggleTheme = () => {
+    if (theme === lightTheme) {
+      setTheme(darkTheme);
+    } else {
+      setTheme(lightTheme);
+    }
+  }
+
   return (
-    <ThemeContextProvider>
-      <ThemeProvider theme={isLightTheme ? lightTheme : darkTheme}>
+    <ThemeProvider theme={theme === lightTheme ? lightTheme : darkTheme}>
+      <button onClick={toggleTheme}>Toggle theme</button>
       <Router>
         <Route path="/" component={SectionsPage} />
         <Route render={() => NotFound} />
       </Router>
-      </ThemeProvider>
-    </ThemeContextProvider>
+    </ThemeProvider>
   );
 };
 

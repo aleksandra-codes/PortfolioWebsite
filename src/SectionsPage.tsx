@@ -13,12 +13,12 @@ import { useState } from "react";
 export default function SectionsPage () {
 
   return (
-      <div>
+        <>
         <Navbar/>
         <About/>
         <Projects/>
         <Contact/>
         <Home/>
-        </div>
+        </>
   );
 }

@@ -21,6 +21,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+
 function HideOnScroll(props: any) {
   const { children, window } = props;
   // Note that you normally won't need to set the window ref as useScrollTrigger
@@ -53,7 +54,6 @@ interface NavbarProps {
 
 const Navbar = (props: NavbarProps) => {
   const { t } = useTranslation();
-  const classes = useStyles();
   return (
     <HideOnScroll {...props}>
       <AppBar position="sticky">
@@ -96,3 +96,5 @@ const Navbar = (props: NavbarProps) => {
 };
 
 export default Navbar;
+
+

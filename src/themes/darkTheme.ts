@@ -1,14 +1,6 @@
-import { createMuiTheme, responsiveFontSizes, Theme } from "@material-ui/core";
 
-// // colors
-// const primary = "#b3294e";
-// const secondary = "#4829B2";
-// const black = "#343a40";
-// const darkBlack = "rgb(36, 40, 44)";
-// const background = "#f5f5f5";
-// const warningLight = "rgba(253, 200, 69, .3)";
-// const warningMain = "rgba(253, 200, 69, .5)";
-// const warningDark = "rgba(253, 200, 69, .7)";
+import { responsiveFontSizes } from "@mui/material/styles";
+import createTheme, { Theme } from "@mui/material/styles/createTheme";
 
 // // border
 // const borderWidth = 2;
@@ -24,8 +16,16 @@ import { createMuiTheme, responsiveFontSizes, Theme } from "@material-ui/core";
 // // spacing
 // const spacing = 8;
 
-const theme: Theme = createMuiTheme({
-  
+const theme: Theme = createTheme({
+    palette: {
+       mode: 'dark',
+       primary: {
+        main: '#666',
+      },
+      secondary: {
+        main: '#555',
+      },
+      }
 });
 
 export default responsiveFontSizes(theme);

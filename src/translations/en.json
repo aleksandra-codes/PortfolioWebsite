@@ -1,8 +1,40 @@
 {
+
     "home": "Home",
+    "hello": "Hello, I'm Sasha",
+    "developer": "I'm a software developer",
+    "viewProjects": "View my projects",
+
+
     "aboutme": "About Me",
+    "aboutTextOne": "I discovered an interest in technology a long time ago, but I only realised my passion towards programming after taking a Full Stack Web Development online course.",
+    "aboutTextTwo": "Recognizing that my interests and talents have aligned, I decided to embark on a new career path as a software engineer - and it has been the best decision I�ve made so far.",
+    "aboutTextThree": "I am now two semesters into my Computer Systems Technology program at BCIT, and have a proven track record in various projects and hackathons. You can learn more about my experiences, activities and achievements below!",
+
+
+
     "contact": "Contact",
+
+
     "projects": "Projects", 
+
+
     "notfound": "Not Found", 
-    "loading": "Loading..."
+
+
+
+    "loading": "Loading...",
+
+    "technologies": "Technologies",
+    "html": "HTML",
+    "scss": "SCSS",
+    "git": "GIT",
+    "javascript": "JavaScript",
+    "figma": "Figma",
+    "bootstrap": "Bootstrap",
+    "materialui": "Material UI",
+    "css": "CSS"
+
+
+    
 }

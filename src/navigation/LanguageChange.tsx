@@ -32,11 +32,11 @@ const LanguageChange = () => {
 
   const showSelectedLanguage = () => {
     if(curFlag == "es"){
-      return (<Avatar alt="Spanish" src={espFlag} />)
+      return (<div>ES</div>)
     } else if (curFlag == "ru") {
-      return (<Avatar alt="Russian" src={ruFlag} />)
+      return (<div>RU</div>)
     } else {
-      return (<Avatar alt="English" src={cadFlag} />)
+      return (<div>EN</div>)
     }
   }
 
@@ -46,6 +46,7 @@ const LanguageChange = () => {
         aria-controls="simple-menu"
         aria-haspopup="true"
         onClick={handleClick}
+        color="inherit"
       >
         {showSelectedLanguage()}
       </Button>
@@ -56,9 +57,9 @@ const LanguageChange = () => {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <MenuItem onClick={() => changeLanguage("en")}><Avatar alt="Spanish" src={cadFlag} /></MenuItem>
-        <MenuItem onClick={() => changeLanguage("es")}><Avatar alt="Spanish" src={espFlag} /></MenuItem>
-        <MenuItem onClick={() => changeLanguage("ru")}><Avatar alt="Russian" src={ruFlag} /></MenuItem>
+        <MenuItem onClick={() => changeLanguage("en")}>EN</MenuItem>
+        <MenuItem onClick={() => changeLanguage("es")}>ES</MenuItem>
+        <MenuItem onClick={() => changeLanguage("ru")}>RU</MenuItem>
       </Menu>
     </>
   );

@@ -1,0 +1,22 @@
+
+#header {
+    justify-content: center;
+}
+.nameHeader {
+    text-transform: uppercase;
+    padding: 20px 0;
+    font-size: 75px;
+}
+
+@media (max-width: 800px){
+    .nameHeader {
+        font-size: medium;
+    }
+}
+
+.subHeader {
+}
+
+.accent {
+    color: #f4511e
+}

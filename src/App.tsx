@@ -3,10 +3,11 @@ import NotFound from "./sections/NotFound";
 import "./i18n";
 import SectionsPage from "./SectionsPage";
 import { useState } from "react";
-
+import "./App.scss"
 import lightTheme from './themes/lightTheme' ;
 import darkTheme from './themes/darkTheme';
 import { Theme, ThemeProvider } from "@mui/material/styles";
+import { CssBaseline } from "@mui/material";
 
 
 const App = () => {
@@ -22,6 +23,7 @@ const App = () => {
 
   return (
     <ThemeProvider theme={theme === lightTheme ? lightTheme : darkTheme}>
+      <CssBaseline/>
       <button onClick={toggleTheme}>Toggle theme</button>
       <Router>
         <Route path="/" component={SectionsPage} />

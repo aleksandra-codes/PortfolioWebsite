@@ -2,8 +2,9 @@
 .section {
     display: flex;
     flex-direction: column;
+	justify-content: center;
     align-items: center;
-	padding: 100px 80px;
+	padding: 20px;
 }
 
 .section:not(.hero):nth-child(even) {
@@ -24,37 +25,3 @@
 	margin-bottom: 30px;
 	text-align: center;
 }
-
-.hero {
-    position: relative;
-	justify-content: center;
-	text-align: center;
-	min-height: 100vh;
-	color: #fff;
-    background: linear-gradient(to bottom, rgba(243, 144, 79, 0.7), rgba(59, 67, 113, 0.7));
-
-}
-
-.hero .background-image {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-size: cover;
-	z-index: -1;
-	// background-color: #80a3db;
-    
-
-}
-
-@media (max-width: 800px) {
-	.hero {
-		min-height: 600px;
-	}
-}
-
-
-// #f3904f
-// → 
-// #3b4371

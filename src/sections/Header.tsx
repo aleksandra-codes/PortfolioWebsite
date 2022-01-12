@@ -2,6 +2,7 @@ import { makeStyles, Typography } from "@material-ui/core";
 import { useTranslation } from "react-i18next";
 import "./css/Header.css";
 
+
 const useStyles = makeStyles({
   name: {
     fontFamily: "'Tenor Sans', sans-serif",

@@ -5,14 +5,8 @@
 .nameHeader {
     text-transform: uppercase;
     padding: 20px 0;
-    font-size: 75px;
 }
 
-@media (max-width: 800px){
-    .nameHeader {
-        font-size: medium;
-    }
-}
 
 .subHeader {
 }

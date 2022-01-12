@@ -30,10 +30,7 @@ const theme: Theme = createTheme({
       mode: 'light',
       primary: {
         main: '#f4511e',
-      },
-      // secondary: {
-      //   main: '#fdf',
-      // },
+      }
   }
 });
 

@@ -5,8 +5,21 @@ import { Container, Grid } from "@mui/material";
 import Header from "./sections/Header";
 import TopBar from "./navigation/TopBar";
 import Footer from "./sections/Footer";
+import { useContext } from "react";
+import { ModeContext } from "./App";
+
 
 export default function SectionsPage() {
+  const {darkMode, setMode } = useContext(ModeContext)
+
+
+  const toggleTheme = () => {
+    if (darkMode === false) {
+      setMode(true)
+    } else {
+      setMode(false)
+    }
+  }
   return (
     <Container maxWidth="xl"  >
       <TopBar />

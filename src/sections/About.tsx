@@ -13,7 +13,7 @@ const About = () => {
 
 
   return (
-    <Paper elevation={0}>
+  
       <div id="about" className="section hero">
 
         <Typography variant="h4" className="title">
@@ -33,7 +33,6 @@ const About = () => {
         <Typography variant="h6">{t("aboutTextTwo")}</Typography>
         <Typography variant="h6">{t("aboutTextThree")}</Typography>
       </div>
-    </Paper>
   );
 };
 

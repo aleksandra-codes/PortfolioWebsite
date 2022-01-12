@@ -7,7 +7,9 @@ const useStyles = makeStyles({
   name: {
     fontFamily: "'Tenor Sans', sans-serif",
     textAlign: "center",
-
+    ['@media (max-width:800px)']: { 
+      fontSize: "50px"
+    }
   }
 
 });

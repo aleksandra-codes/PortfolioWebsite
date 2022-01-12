@@ -6,24 +6,17 @@ import { createContext, useState } from "react";
 import "./App.scss"
 import lightTheme from './themes/lightTheme' ;
 import darkTheme from './themes/darkTheme';
-import { Theme, ThemeProvider } from "@mui/material/styles";
+import { ThemeProvider } from "@mui/material/styles";
 import { CssBaseline } from "@mui/material";
+import { ModeContext } from "./context/ModeContext";
 
 
-interface Mode {
-  darkMode: boolean;
-  setMode: any;
-}
 
-export const ModeContext = createContext<Mode>({darkMode: false, setMode: undefined})
 
 
 const App = () => {
   
-  
   const [darkMode, setMode] = useState(false);
-  
-
   return (
     <ModeContext.Provider value={{darkMode, setMode}}>
     <ThemeProvider theme={darkMode === false ? lightTheme : darkTheme}>

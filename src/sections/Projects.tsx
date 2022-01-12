@@ -18,7 +18,7 @@ import React from "react";
 interface ProjectCard {
   src: string;
   description: string;
-  name: string
+  name: string;
 }
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -56,9 +56,21 @@ function a11yProps(index: number) {
 const Projects = () => {
   const { t } = useTranslation();
   const imgArr: ProjectCard[] = [
-    { src: skyline, description: "hero", name:"Skyline Ziplines Admin System"},
-    { src: safebike, description: `${t("safebike_description")}`, name:"Safebike" },
-    { src: rideshare, description: `${t("rideshare_description")}`, name:"Rideshare" },
+    {
+      src: skyline,
+      description: `${t("zipline_description")}`,
+      name: "Skyline Ziplines Admin System",
+    },
+    {
+      src: safebike,
+      description: `${t("safebike_description")}`,
+      name: "Safebike",
+    },
+    {
+      src: rideshare,
+      description: `${t("rideshare_description")}`,
+      name: "Rideshare",
+    },
   ];
   const [value, setValue] = React.useState(0);
 
@@ -68,34 +80,63 @@ const Projects = () => {
 
   return (
     <div id="projects" className="section">
-      <Typography variant="h4" className="title">
-        {t("projects")}
-      </Typography>
-      <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-        {imgArr.map((img: ProjectCard) => (
-          <Grid item xs={12} sm={6} md={4}>
-          <Card sx={{ maxWidth: 300 }}>
-            <CardHeader
-              title={img.name}
-              // subheader="September 14, 2016"
-            />
-            <CardMedia
-              component="img"
-              height="194"
-              image={img.src}
-              alt={img.description}
-            />
-            <CardContent>
-              <Typography variant="body2">
-                {img.description}
-              </Typography>
-            </CardContent>
-          </Card>
+      <div className="title">
+        <Typography variant="h4" className="title">
+          {t("projects")}
+        </Typography>
+      </div>
+      <Grid container spacing={2} direction="column">
+        <Grid item xs={12}>
+        <Grid container spacing={2} direction="row" alignItems="center" justifyContent="flex-start">
+          <Grid item xs={12} md={7} className="projectImgContainer">
+              <img
+                src={`${imgArr[0].src}`}
+                alt={imgArr[0].name}
+                loading="lazy"
+                className="projectImg"
+              />
+            </Grid>
+            <Grid item xs={8} md={4}>
+              <Typography>{imgArr[0].description}</Typography>
+            </Grid>
+            
           </Grid>
-        ))}
+        </Grid>
+        <Grid item xs={12}>
+          <Grid container spacing={2} direction="row"  alignItems="center" justifyContent="flex-end">
+            <Grid item xs={8} md={4} order={{xs: 1, md: 0}} >
+              <Typography>{imgArr[1].description}</Typography>
+            </Grid>
+            <Grid item xs={12} md={7} className="projectImgContainer" >
+              <img
+                src={`${imgArr[1].src}`}
+                alt={imgArr[1].name}
+                loading="lazy"
+                className="projectImg"
+              />
+            </Grid>
+          </Grid>
+        </Grid>
+        <Grid item xs={12}>
+          <Grid container spacing={2} direction="row" alignItems="center" justifyContent="flex-start">
+          <Grid item xs={12} md={7} className="projectImgContainer">
+              <img
+                src={`${imgArr[2].src}`}
+                alt={imgArr[2].name}
+                loading="lazy"
+                className="projectImg"
+              />
+            </Grid>
+            <Grid item xs={8} md={4}>
+              <Typography>{imgArr[2].description}</Typography>
+            </Grid>
+            
+          </Grid>
+        </Grid>
       </Grid>
     </div>
   );
 };
 
 export default Projects;
+

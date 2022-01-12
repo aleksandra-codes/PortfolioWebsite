@@ -5,22 +5,21 @@ import { Container, Grid } from "@mui/material";
 import Header from "./sections/Header";
 import TopBar from "./navigation/TopBar";
 import Footer from "./sections/Footer";
-import { useContext } from "react";
-import { ModeContext } from "./App";
+import Technologies from "./sections/Technologies";
 
 
 export default function SectionsPage() {
   return (
-    <Container maxWidth="xl"  >
+    <Container maxWidth="lg"  >
       <TopBar />
       <Header />
       <Grid container spacing={2}>
-        {/* <Grid item xs={12} md={4}> */}
+        <Grid item xs={12} md={12} lg={6}>
         <About />
-        {/* </Grid> */}
-        {/* <Grid item xs={12} md={8}>
-          <Projects />
-        </Grid> */}
+        </Grid>
+        <Grid item xs={12} md={12} lg={6}>
+          <Technologies />
+        </Grid>
       </Grid>
       <Projects />
       <Footer/>

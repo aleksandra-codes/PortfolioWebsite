@@ -1,9 +1,17 @@
-/* .grid {
+
+.box {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
+}
+.projectBox{
+    display: flex;
+}
+.projectImg{
+    width: 450px;
+    max-height: 300px;
+    object-fit: cover;
 }
 
-.grid img {
-    height: 330px;
-} */
+.projectImgContainer {
+    text-align: center;
+}

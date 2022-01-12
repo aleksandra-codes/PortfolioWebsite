@@ -1,7 +1,13 @@
 
 #header {
     justify-content: center;
+    margin: 50px 0 0 0;
 }
+
+@media (max-width: 800px) {
+
+}
+
 .nameHeader {
     text-transform: uppercase;
     padding: 20px 0;
@@ -9,6 +15,7 @@
 
 
 .subHeader {
+
 }
 
 .accent {

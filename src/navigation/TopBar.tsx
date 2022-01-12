@@ -6,7 +6,7 @@ import "./css/TopBar.css";
 import { Link } from "react-router-dom";
 import logo from "../images/logo.png";
 import { useContext } from "react";
-import { ModeContext } from "../App";
+import { ModeContext } from "../context/ModeContext";
 import { IconButton, Stack} from "@mui/material";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";

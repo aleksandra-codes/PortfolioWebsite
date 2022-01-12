@@ -5,13 +5,14 @@ import "./css/Home.css"
 
 
 
-const Home = () => {
+const Technologies = () => {
   const { t } = useTranslation();
   return (
-    <div className="section" id="home">
-      <Typography variant="h3">{t("home")}</Typography>
+    <div className="section" id="technologies">
+      <Typography variant="h4">{t("technologies")}</Typography>
+
     </div>
   );
 };
 
-export default Home;
+export default Technologies;

@@ -2,8 +2,8 @@ import { Paper, Typography } from "@material-ui/core";
 import { useTranslation } from "react-i18next";
 import ScrollTopArrow from "../navigation/ScrollTopArrow";
 import safebike from "../images/projects_img/safebike_medium.jpg";
-import safebike2 from "../images/projects_img/smartmockups_jzst7d17.png";
-import hero from "../images/hero-image.jpeg";
+import rideshare from "../images/projects_img/smartmockups_jzst7d17.png";
+import skyline from "../images/projects_img/skyline_ziplines2.jpeg";
 import en from "../images/en.png";
 import "./css/Projects.css";
 import Grid from "@mui/material/Grid";
@@ -15,9 +15,10 @@ import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import React from "react";
 
-interface ProjectImage {
+interface ProjectCard {
   src: string;
   description: string;
+  name: string
 }
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -54,11 +55,10 @@ function a11yProps(index: number) {
 
 const Projects = () => {
   const { t } = useTranslation();
-  const imgArr: ProjectImage[] = [
-    { src: safebike, description: "safe bike" },
-    { src: safebike2, description: "bubbles" },
-    { src: hero, description: "hero" },
-    { src: en, description: "en" },
+  const imgArr: ProjectCard[] = [
+    { src: skyline, description: "hero", name:"Skyline Ziplines Admin System"},
+    { src: safebike, description: `${t("safebike_description")}`, name:"Safebike" },
+    { src: rideshare, description: `${t("rideshare_description")}`, name:"Rideshare" },
   ];
   const [value, setValue] = React.useState(0);
 
@@ -71,34 +71,13 @@ const Projects = () => {
       <Typography variant="h4" className="title">
         {t("projects")}
       </Typography>
-      <Box sx={{ width: "100%" }}>
-        <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-          <Tabs
-            value={value}
-            onChange={handleChange}
-            aria-label="basic tabs example"
-          >
-            {imgArr.map((img: ProjectImage) => (
-              <Tab label={img.description} {...a11yProps(0)} />
-            ))}
-          </Tabs>
-        </Box>
-        <TabPanel value={value} index={0}>
-        </TabPanel>
-        <TabPanel value={value} index={1}>
-          Item Two
-        </TabPanel>
-        <TabPanel value={value} index={2}>
-          Item Three
-        </TabPanel>
-      </Box>
-      {/* <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-        {imgArr.map((img: ProjectImage) => (
+      <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+        {imgArr.map((img: ProjectCard) => (
           <Grid item xs={12} sm={6} md={4}>
           <Card sx={{ maxWidth: 300 }}>
             <CardHeader
-              title={img.description}
-              subheader="September 14, 2016"
+              title={img.name}
+              // subheader="September 14, 2016"
             />
             <CardMedia
               component="img"
@@ -108,15 +87,13 @@ const Projects = () => {
             />
             <CardContent>
               <Typography variant="body2">
-                This impressive paella is a perfect party dish and a fun meal to
-                cook together with your guests. Add 1 cup of frozen peas along
-                with the mussels, if you like.
+                {img.description}
               </Typography>
             </CardContent>
           </Card>
           </Grid>
         ))}
-      </Grid> */}
+      </Grid>
     </div>
   );
 };

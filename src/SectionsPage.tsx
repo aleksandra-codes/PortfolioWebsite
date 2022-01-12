@@ -10,28 +10,19 @@ import { ModeContext } from "./App";
 
 
 export default function SectionsPage() {
-  const {darkMode, setMode } = useContext(ModeContext)
-
-
-  const toggleTheme = () => {
-    if (darkMode === false) {
-      setMode(true)
-    } else {
-      setMode(false)
-    }
-  }
   return (
     <Container maxWidth="xl"  >
       <TopBar />
       <Header />
       <Grid container spacing={2}>
-        <Grid item xs={12} md={4}>
+        {/* <Grid item xs={12} md={4}> */}
         <About />
-        </Grid>
-        <Grid item xs={12} md={8}>
+        {/* </Grid> */}
+        {/* <Grid item xs={12} md={8}>
           <Projects />
-        </Grid>
+        </Grid> */}
       </Grid>
+      <Projects />
       <Footer/>
     </Container>
   );

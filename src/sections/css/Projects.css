@@ -10,8 +10,10 @@
     width: 450px;
     max-height: 300px;
     object-fit: cover;
+
 }
 
 .projectImgContainer {
     text-align: center;
+    overflow: hidden;
 }

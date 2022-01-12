@@ -1,19 +1,16 @@
-import { Paper, Typography } from "@material-ui/core";
+import { makeStyles, Paper, Typography } from "@material-ui/core";
 import { useTranslation } from "react-i18next";
-import ScrollTopArrow from "../navigation/ScrollTopArrow";
 import safebike from "../images/projects_img/safebike_medium.jpg";
 import rideshare from "../images/projects_img/smartmockups_jzst7d17.png";
 import skyline from "../images/projects_img/skyline_ziplines2.jpeg";
-import en from "../images/en.png";
 import "./css/Projects.css";
 import Grid from "@mui/material/Grid";
-import Card from "@mui/material/Card";
-import { CardContent, CardHeader, CardMedia } from "@mui/material";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
-
 import Box from "@mui/material/Box";
 import React from "react";
+import { FiFigma } from "react-icons/fi";
+import {FaReact, FaSass} from "react-icons/fa";
+import {IoLogoCss3} from "react-icons/io"
+import {AiFillGithub, AiFillHtml5} from "react-icons/ai"
 
 interface ProjectCard {
   src: string;
@@ -53,8 +50,17 @@ function a11yProps(index: number) {
   };
 }
 
+const useStyles = makeStyles({
+  projectContainer: {
+    ["@media (max-width:900px)"]: {
+      justifyContent: "center",
+    },
+  },
+});
+
 const Projects = () => {
   const { t } = useTranslation();
+  const classes = useStyles();
   const imgArr: ProjectCard[] = [
     {
       src: skyline,
@@ -87,8 +93,15 @@ const Projects = () => {
       </div>
       <Grid container spacing={2} direction="column">
         <Grid item xs={12}>
-        <Grid container spacing={2} direction="row" alignItems="center" justifyContent="flex-start">
-          <Grid item xs={12} md={7} className="projectImgContainer">
+          <Grid
+            container
+            spacing={2}
+            direction="row"
+            alignItems="center"
+            justifyContent="flex-start"
+            className={classes.projectContainer}
+          >
+            <Grid item xs={12} md={6} className="projectImgContainer">
               <img
                 src={`${imgArr[0].src}`}
                 alt={imgArr[0].name}
@@ -96,18 +109,76 @@ const Projects = () => {
                 className="projectImg"
               />
             </Grid>
-            <Grid item xs={8} md={4}>
-              <Typography>{imgArr[0].description}</Typography>
+            <Grid item xs={12} sm={8} md={4}>
+            <Grid container>
+                <Grid item>
+                  <Typography>{imgArr[0].description}</Typography>
+                </Grid>
+                <Grid item>
+                  <Grid container>
+                    <Grid item>
+                      <FaReact />
+                    </Grid>
+                    <Grid item>
+                      <Typography> React Native</Typography>
+                    </Grid>
+                  </Grid>
+                </Grid>
+              </Grid>
             </Grid>
-            
           </Grid>
         </Grid>
         <Grid item xs={12}>
-          <Grid container spacing={2} direction="row"  alignItems="center" justifyContent="flex-end">
-            <Grid item xs={8} md={4} order={{xs: 1, md: 0}} >
-              <Typography>{imgArr[1].description}</Typography>
+          <Grid
+            container
+            spacing={2}
+            direction="row"
+            alignItems="center"
+            justifyContent="flex-end"
+            className={classes.projectContainer}
+          >
+            <Grid item xs={12} sm={8} md={4} order={{ xs: 1, md: 0 }}>
+            <Grid container>
+                <Grid item>
+                  <Typography>{imgArr[1].description}</Typography>
+                </Grid>
+                <Grid item>
+                  <Grid container>
+                    <Grid item>
+                      <AiFillHtml5 />
+                    </Grid>
+                    <Grid item>
+                      <Typography> HTML</Typography>
+                    </Grid>
+                  </Grid>
+                  <Grid container>
+                    <Grid item>
+                      <IoLogoCss3 />
+                    </Grid>
+                    <Grid item>
+                      <Typography>CSS</Typography>
+                    </Grid>
+                  </Grid>
+                  <Grid container>
+                    <Grid item>
+                      <FaSass />
+                    </Grid>
+                    <Grid item>
+                      <Typography> Sass</Typography>
+                    </Grid>
+                  </Grid>
+                  <Grid container>
+                    <Grid item>
+                      <AiFillGithub />
+                    </Grid>
+                    <Grid item>
+                      <Typography> Git</Typography>
+                    </Grid>
+                  </Grid>
+                </Grid>
+              </Grid>
             </Grid>
-            <Grid item xs={12} md={7} className="projectImgContainer" >
+            <Grid item xs={12} md={6} className="projectImgContainer">
               <img
                 src={`${imgArr[1].src}`}
                 alt={imgArr[1].name}
@@ -118,8 +189,15 @@ const Projects = () => {
           </Grid>
         </Grid>
         <Grid item xs={12}>
-          <Grid container spacing={2} direction="row" alignItems="center" justifyContent="flex-start">
-          <Grid item xs={12} md={7} className="projectImgContainer">
+          <Grid
+            container
+            spacing={2}
+            direction="row"
+            alignItems="center"
+            justifyContent="flex-start"
+            className={classes.projectContainer}
+          >
+            <Grid item xs={12} md={6} className="projectImgContainer">
               <img
                 src={`${imgArr[2].src}`}
                 alt={imgArr[2].name}
@@ -127,10 +205,23 @@ const Projects = () => {
                 className="projectImg"
               />
             </Grid>
-            <Grid item xs={8} md={4}>
-              <Typography>{imgArr[2].description}</Typography>
+            <Grid item xs={12} sm={8} md={4}>
+              <Grid container>
+                <Grid item>
+                  <Typography>{imgArr[2].description}</Typography>
+                </Grid>
+                <Grid item>
+                  <Grid container>
+                    <Grid item>
+                      <FiFigma />
+                    </Grid>
+                    <Grid item>
+                      <Typography> Figma</Typography>
+                    </Grid>
+                  </Grid>
+                </Grid>
+              </Grid>
             </Grid>
-            
           </Grid>
         </Grid>
       </Grid>
@@ -139,4 +230,3 @@ const Projects = () => {
 };
 
 export default Projects;
-

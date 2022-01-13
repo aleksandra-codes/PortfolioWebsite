@@ -10,7 +10,22 @@
     width: 450px;
     max-height: 300px;
     object-fit: cover;
+    border-radius: 4px;
+    opacity: 0.5;
+    transition: 1s;
+}
 
+.projectImg:hover{
+   opacity: 1;
+
+}
+
+@media (max-width: 700px) {
+    .projectImg{
+        width: 300px;
+        max-height: 200px;
+        opacity:1;
+    }
 }
 
 .projectImgContainer {

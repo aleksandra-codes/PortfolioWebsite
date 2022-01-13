@@ -10,7 +10,7 @@
     "aboutme": "About Me",
     "aboutTextOne": "I discovered an interest in technology a long time ago, but I only realised my passion towards programming after taking a Full Stack Web Development online course.",
     "aboutTextTwo": "Recognizing that my interests and talents have aligned, I decided to embark on a new career path as a software engineer - and it has been the best decision I've made so far.",
-    "aboutTextThree": "Fast forward to today, and I’ve had the privilege of working at a fintech company as well as on various school projects. My main focus now is on building beautiful, responsive and user friendly applications and creating seamless user experience.",
+    "aboutTextThree": "Fast forward to today, and I’ve had the privilege of working at a fintech company as well as on various projects with my peers. My main focus now is on building beautiful, responsive and user friendly applications and creating seamless user experience.",
 
 
 
@@ -35,6 +35,8 @@
     "bootstrap": "Bootstrap",
     "materialui": "Material UI",
     "css": "CSS",
+
+    "skills": "Skills",
 
     "safebike_description": "Created an original design for a SafeBike app. This app is created for a NPO BikeHike Adventures to connect volunteers and participants of the bike races and marathons during events. Participants can share location in order to receive help from the voluteers.",
     "rideshare_description": "Awarded 'Best Technology Solution' by the organizers of the Hack YVR hackathon. Collaborated with a team of four students to create and design a UX and UI experience of a ride sharing app for students",

@@ -1,4 +1,4 @@
-import { makeStyles, Paper, Typography } from "@material-ui/core";
+import { makeStyles, Typography } from "@material-ui/core";
 import { useTranslation } from "react-i18next";
 import safebike from "../images/projects_img/safebike_medium.jpg";
 import rideshare from "../images/projects_img/smartmockups_jzst7d17.png";
@@ -8,9 +8,10 @@ import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import React from "react";
 import { FiFigma } from "react-icons/fi";
-import {FaReact, FaSass} from "react-icons/fa";
-import {IoLogoCss3} from "react-icons/io"
-import {AiFillGithub, AiFillHtml5} from "react-icons/ai"
+import { FaReact, FaSass } from "react-icons/fa";
+import { IoLogoCss3 } from "react-icons/io";
+import { AiFillGithub, AiFillHtml5 } from "react-icons/ai";
+import { Paper } from "@mui/material";
 
 interface ProjectCard {
   src: string;
@@ -110,19 +111,12 @@ const Projects = () => {
               />
             </Grid>
             <Grid item xs={12} sm={8} md={4}>
-            <Grid container>
+              <Grid container>
                 <Grid item>
                   <Typography>{imgArr[0].description}</Typography>
                 </Grid>
                 <Grid item>
-                  <Grid container>
-                    <Grid item>
-                      <FaReact />
-                    </Grid>
-                    <Grid item>
-                      <Typography> React Native</Typography>
-                    </Grid>
-                  </Grid>
+                  <FaReact />
                 </Grid>
               </Grid>
             </Grid>
@@ -138,43 +132,15 @@ const Projects = () => {
             className={classes.projectContainer}
           >
             <Grid item xs={12} sm={8} md={4} order={{ xs: 1, md: 0 }}>
-            <Grid container>
+              <Grid container>
                 <Grid item>
                   <Typography>{imgArr[1].description}</Typography>
                 </Grid>
                 <Grid item>
-                  <Grid container>
-                    <Grid item>
-                      <AiFillHtml5 />
-                    </Grid>
-                    <Grid item>
-                      <Typography> HTML</Typography>
-                    </Grid>
-                  </Grid>
-                  <Grid container>
-                    <Grid item>
-                      <IoLogoCss3 />
-                    </Grid>
-                    <Grid item>
-                      <Typography>CSS</Typography>
-                    </Grid>
-                  </Grid>
-                  <Grid container>
-                    <Grid item>
-                      <FaSass />
-                    </Grid>
-                    <Grid item>
-                      <Typography> Sass</Typography>
-                    </Grid>
-                  </Grid>
-                  <Grid container>
-                    <Grid item>
-                      <AiFillGithub />
-                    </Grid>
-                    <Grid item>
-                      <Typography> Git</Typography>
-                    </Grid>
-                  </Grid>
+                  <AiFillHtml5 />
+                  <IoLogoCss3 />
+                  <FaSass />
+                  <AiFillGithub />
                 </Grid>
               </Grid>
             </Grid>
@@ -211,14 +177,7 @@ const Projects = () => {
                   <Typography>{imgArr[2].description}</Typography>
                 </Grid>
                 <Grid item>
-                  <Grid container>
-                    <Grid item>
-                      <FiFigma />
-                    </Grid>
-                    <Grid item>
-                      <Typography> Figma</Typography>
-                    </Grid>
-                  </Grid>
+                  <FiFigma />
                 </Grid>
               </Grid>
             </Grid>

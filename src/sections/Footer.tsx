@@ -6,7 +6,8 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import MailIcon from "@mui/icons-material/Mail";
 import { Link } from "@mui/material";
 import ArticleIcon from '@mui/icons-material/Article';
-import resume from "../resume/resume.pdf"
+
+
 
 
 const useStyles = makeStyles({
@@ -19,7 +20,7 @@ const Footer = () => {
   return (
     <div className="section" id="footer">
       <div>
-        <Link href={resume} target = "_blank">
+        <Link href="#" rel="noopener noreferrer" target="_blank">
           <ArticleIcon className="icon" fontSize="large" />
         </Link>
         <Link href="https://www.linkedin.com/in/aleksandra-sorokina/">
@@ -29,7 +30,7 @@ const Footer = () => {
           <GitHubIcon fontSize="large" className="icon" />
         </Link>
 
-        <Link href="#">
+        <Link href="mailto:asorokina@my.bcit.ca?">
           <MailIcon fontSize="large" className="icon" />
         </Link>
       </div>

@@ -11,7 +11,8 @@ import { FiFigma } from "react-icons/fi";
 import { FaReact, FaSass } from "react-icons/fa";
 import { IoLogoCss3 } from "react-icons/io";
 import { AiFillGithub, AiFillHtml5 } from "react-icons/ai";
-import { Paper } from "@mui/material";
+import { Link, Paper } from "@mui/material";
+import { GoLinkExternal } from "react-icons/go";
 
 interface ProjectCard {
   src: string;
@@ -118,6 +119,11 @@ const Projects = () => {
                 <Grid item>
                   <FaReact />
                 </Grid>
+                <Grid item>
+                  <Link href="https://github.com/SkylineZiplines/Skyline-Ziplines-Administration">
+                    <GoLinkExternal />
+                  </Link>
+                </Grid>
               </Grid>
             </Grid>
           </Grid>
@@ -142,6 +148,9 @@ const Projects = () => {
                   <FaSass />
                   <AiFillGithub />
                 </Grid>
+                <Link href="https://github.com/aleksandra-codes/SafeBike">
+                    <GoLinkExternal />
+                  </Link>
               </Grid>
             </Grid>
             <Grid item xs={12} md={6} className="projectImgContainer">

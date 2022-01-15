@@ -6,6 +6,7 @@ import Header from "./sections/Header";
 import TopBar from "./navigation/TopBar";
 import Footer from "./sections/Footer";
 import Technologies from "./sections/Technologies";
+import Portfolio from "./sections/Portfolio";
 
 
 export default function SectionsPage() {
@@ -21,7 +22,8 @@ export default function SectionsPage() {
           <Technologies />
         </Grid>
       </Grid>
-      <Projects />
+      {/* <Projects /> */}
+      <Portfolio />
       <Footer/>
     </Container>
   );

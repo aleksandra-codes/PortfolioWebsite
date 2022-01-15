@@ -1,0 +1,57 @@
+.projectWrap {
+  width: 100%;
+  height: 40vh;
+  margin: 30px;
+}
+
+.projectItem {
+  flex: 1;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  transition: all ease-out 0.5s;
+  
+  position:relative;
+
+  padding:40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.projectItem:hover {
+  flex: 4;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.projectItem div {
+  position: relative;
+  z-index: 2;
+}
+
+.projectItem:hover:before {
+  bottom: 0;
+}
+
+.projectDescription {
+  visibility: hidden;
+}
+
+.projectItem:hover .projectDescription {
+  visibility: visible;
+}
+
+.projectWrap .projectItem:first-of-type {
+  background-image: url("../../images/projects_img/safebike_medium.jpg");
+}
+.projectWrap .projectItem:nth-of-type(2) {
+  background-image: url("../../images/projects_img/skyline_checklists.jpeg");
+}
+.projectWrap .projectItem:nth-of-type(3) {
+  background-image: url("../../images/projects_img/smartmockups_jzst7d17.png");
+}
+.projectWrap .projectItem:nth-of-type(4) {
+  background-image: url("../../images/projects_img/connectly.jpeg");
+}
+/* .projectWrap .projectItem:last-of-type {
+    background-image: url('../../images/projects_img/smartmockups_jzst7d17.png');
+  } */

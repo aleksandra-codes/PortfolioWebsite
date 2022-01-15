@@ -1,3 +1,65 @@
 .skillsContainer{
 font-size: 40px;
 }
+
+.techBox {
+    perspective: 500px;
+    margin: 15px;
+    /* transform: rotate(90deg); */
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 5s;
+}
+
+.card {
+    /* position: relative; */
+    border-radius: 5%; 
+    width: 80px;
+    height: 80px;
+
+    transform-style: preserve-3d;
+    transition: 0.6s ease;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+    cursor : pointer;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    overflow: hidden;
+
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.4);
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    height: 210%;
+    width: 200%;
+    top: 100%;
+    left: -140%;
+    /* background: rgb(0, 96, 223);
+    background: linear-gradient(to right, #00d2ff, #3a7bd5); */
+    transform: rotate(45deg);
+    transition: all .4s ease-in-out;
+
+}
+.card:hover {
+    transition: all .2s linear;
+    transform: scale(1.2);
+    color: #fff;
+}
+.card:hover::before {
+    top: -80%;
+    left: -25%;
+}
+
+.card:hover .front {
+    transition: all .2s linear;
+    transform: scale(1.2);
+    color: #fff;
+}

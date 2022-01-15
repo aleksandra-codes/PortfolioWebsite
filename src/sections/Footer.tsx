@@ -4,10 +4,8 @@ import "./css/Footer.css";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import MailIcon from "@mui/icons-material/Mail";
-import { Link } from "@mui/material";
+import { Link, useTheme } from "@mui/material";
 import ArticleIcon from '@mui/icons-material/Article';
-
-
 
 
 const useStyles = makeStyles({

@@ -114,7 +114,7 @@ const Projects = () => {
             <Grid item xs={12} sm={8} md={4}>
               <Grid container>
                 <Grid item>
-                  <Typography>{imgArr[0].description}</Typography>
+                  <Typography variant="h3">{imgArr[0].description}</Typography>
                 </Grid>
                 <Grid item>
                   <FaReact />

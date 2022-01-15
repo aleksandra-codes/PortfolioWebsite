@@ -15,10 +15,10 @@ export default function SectionsPage() {
       <TopBar />
       <Header />
       <Grid container spacing={2}>
-        <Grid item xs={12} md={12} lg={6}>
+        <Grid item xs={12} md={12} lg={7}>
         <About />
         </Grid>
-        <Grid item xs={12} md={12} lg={6}>
+        <Grid item xs={12} md={12} lg={5}>
           <Technologies />
         </Grid>
       </Grid>

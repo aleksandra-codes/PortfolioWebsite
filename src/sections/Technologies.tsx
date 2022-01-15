@@ -49,8 +49,64 @@ const Technologies = () => {
         justifyContent="center"
         alignItems="center"
         className="skillsContainer"
-        spacing={2}
+        spacing={3}
       >
+        <Grid item className="techBox">
+          <div className={`card ${classes.box}`}>
+            <div className="front">
+              <AiFillHtml5 />
+            </div>
+          </div>
+        </Grid>
+        <Grid item className="techBox">
+          <div className={`card ${classes.box}`}>
+            <div className="front">
+              <IoLogoCss3 />
+            </div>
+          </div>
+        </Grid>
+        <Grid item className="techBox">
+          <div className={`card ${classes.box}`}>
+            <div className="front">
+              <FaSass />
+            </div>
+          </div>
+        </Grid>
+        <Grid item className="techBox">
+          <div className={`card ${classes.box}`}>
+            <div className="front">
+              <AiFillGithub />
+            </div>
+          </div>
+        </Grid>
+        <Grid item className="techBox">
+          <div className={`card ${classes.box}`}>
+            <div className="front">
+              <AiFillHtml5 />
+            </div>
+          </div>
+        </Grid>
+        <Grid item className="techBox">
+          <div className={`card ${classes.box}`}>
+            <div className="front">
+              <IoLogoCss3 />
+            </div>
+          </div>
+        </Grid>
+        <Grid item className="techBox">
+          <div className={`card ${classes.box}`}>
+            <div className="front">
+              <FaSass />
+            </div>
+          </div>
+        </Grid>
+        <Grid item className="techBox">
+          <div className={`card ${classes.box}`}>
+            <div className="front">
+              <AiFillGithub />
+            </div>
+          </div>
+        </Grid>
         <Grid item className="techBox">
           <div className={`card ${classes.box}`}>
             <div className="front">

@@ -15,6 +15,7 @@ const useStyles = makeStyles({
 const Footer = () => {
   const { t } = useTranslation();
   const classes = useStyles();
+  const theme = useTheme();
   return (
     <div className="section" id="footer">
       <div>
@@ -32,7 +33,7 @@ const Footer = () => {
           <MailIcon fontSize="large" className="icon" />
         </Link>
       </div>
-      <div> Designed and build with ❤ by Aleksandra Sorokina.</div>
+      <Typography variant="subtitle1" className="footerText"> Build with ❤ by Aleksandra Sorokina.</Typography>
     </div>
   );
 };

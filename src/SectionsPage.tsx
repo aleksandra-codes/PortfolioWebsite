@@ -7,6 +7,8 @@ import TopBar from "./navigation/TopBar";
 import Footer from "./sections/Footer";
 import Technologies from "./sections/Technologies";
 import Portfolio from "./sections/Portfolio";
+import Sidebar from "./sections/Sidebar";
+import RightSidebar from "./sections/RightSidebar";
 
 
 export default function SectionsPage() {
@@ -22,9 +24,11 @@ export default function SectionsPage() {
           <Technologies />
         </Grid>
       </Grid>
-      {/* <Projects /> */}
+      <Projects />
       <Portfolio />
       <Footer/>
+      <Sidebar/>
+      <RightSidebar />
     </Container>
   );
 }

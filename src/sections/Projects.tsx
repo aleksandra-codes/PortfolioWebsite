@@ -114,7 +114,7 @@ const Projects = () => {
             <Grid item xs={12} sm={8} md={4}>
               <Grid container>
                 <Grid item>
-                  <Typography variant="h3">{imgArr[0].description}</Typography>
+                  <Typography variant="h6">{imgArr[0].description}</Typography>
                 </Grid>
                 <Grid item>
                   <FaReact />
@@ -140,7 +140,7 @@ const Projects = () => {
             <Grid item xs={12} sm={8} md={4} order={{ xs: 1, md: 0 }}>
               <Grid container>
                 <Grid item>
-                  <Typography>{imgArr[1].description}</Typography>
+                  <Typography variant="h6">{imgArr[1].description}</Typography>
                 </Grid>
                 <Grid item>
                   <AiFillHtml5 />
@@ -183,7 +183,7 @@ const Projects = () => {
             <Grid item xs={12} sm={8} md={4}>
               <Grid container>
                 <Grid item>
-                  <Typography>{imgArr[2].description}</Typography>
+                  <Typography variant="h6">{imgArr[2].description}</Typography>
                 </Grid>
                 <Grid item>
                   <FiFigma />

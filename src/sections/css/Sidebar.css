@@ -1,0 +1,20 @@
+#sidebar {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 15px;
+  bottom: -10px;
+}
+
+.vl {
+  border: 0.1px solid #f4511e;
+  height: 100px;
+  /* border: none; */
+  background-color: #f4511e;
+}
+
+@media (max-width: 1200px) {
+  #sidebar {
+    display: none;
+  }
+}

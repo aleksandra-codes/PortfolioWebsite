@@ -71,13 +71,13 @@ const Projects = () => {
       src: skyline,
       description: `${t("zipline_description")}`,
       name: "Skyline Ziplines Admin System",
-      technologies: ["React", "Typescript"],
+      technologies: ["React Native", "Typescript"],
       githubLink:
         "https://github.com/SkylineZiplines/Skyline-Ziplines-Administration",
     },
     {
-      description: `${t("connectly")}`,
-      name: "Connectly",
+      description: `${t("connectly_description")}`,
+      name: `${t("connectly")}`,
       src: connectly,
       githubLink: "https://github.com/youngk313/Connectly.git",
       technologies: ["Android", "Java"],
@@ -129,7 +129,10 @@ const Projects = () => {
                 />
               </Grid>
               <Grid item xs={12} md={7} className="textDescription">
-                <Typography variant="h6">{project.description}</Typography>
+                <Typography variant="h6">{project.name}</Typography>
+                <Typography variant="subtitle1">
+                  {project.description}
+                </Typography>
                 {project.githubLink! ? (
                   <Button
                     href={project.githubLink}

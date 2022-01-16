@@ -13,7 +13,7 @@
   background-color: #f4511e;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1000px) {
   #sidebar {
     display: none;
   }

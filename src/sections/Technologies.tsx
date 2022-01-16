@@ -55,6 +55,7 @@ const Technologies = () => {
           <div className={`card ${classes.box}`}>
             <div className="front">
               <AiFillHtml5 />
+              {/* <Typography variant="subtitle2">HTML</Typography> */}
             </div>
           </div>
         </Grid>

@@ -67,18 +67,17 @@ const Navbar = (props: NavbarProps) => {
           className="logo"
         />
       </Link>
-      <Stack direction="row" alignItems="center" spacing={1}>
-        <LanguageChange />
-
-        {darkMode ? (
-          <IconButton onClick={toggleTheme}>
-            <LightModeIcon />
+      {darkMode ? (
+          <IconButton onClick={toggleTheme} size="large">
+            <LightModeIcon className="modeSwitchLight" />
           </IconButton>
         ) : (
           <IconButton onClick={toggleTheme}>
-            <DarkModeIcon />
+            <DarkModeIcon fontSize="inherit" className="modeSwitchDark"/>
           </IconButton>
         )}
+      <Stack direction="row" alignItems="center" spacing={1}>
+        <LanguageChange />
       </Stack>
     </div>
   );

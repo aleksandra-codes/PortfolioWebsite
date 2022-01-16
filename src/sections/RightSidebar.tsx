@@ -8,22 +8,24 @@ import { Link, useTheme } from "@mui/material";
 import ArticleIcon from "@mui/icons-material/Article";
 import "./css/RightSidebar.css";
 
-
-
 const Footer = () => {
   const { t } = useTranslation();
   const theme = useTheme();
   const useStyles = makeStyles({
     emailText: {
-        color: theme.palette.primary.main
+      color: theme.palette.primary.main,
     },
   });
   const classes = useStyles();
-  
+
   return (
     <div id="rightSidebar">
-        <div className="email">
-      <Typography variant="subtitle1" className={classes.emailText}>aleksandra.codes@gmail.com</Typography>
+      <div className="email">
+        <Link href="mailto:asorokina@my.bcit.ca?" style={{ textDecoration: 'none' }}>
+          <Typography variant="subtitle1" className={classes.emailText}>
+            aleksandra.codes@gmail.com
+          </Typography>
+        </Link>
       </div>
       <hr className="vl" />
     </div>

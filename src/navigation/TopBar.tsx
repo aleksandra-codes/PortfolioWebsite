@@ -76,9 +76,9 @@ const Navbar = (props: NavbarProps) => {
             <DarkModeIcon fontSize="inherit" className="modeSwitchDark"/>
           </IconButton>
         )}
-      {/* <Stack direction="row" alignItems="center" spacing={1}>
+      {/* <Stack direction="row" alignItems="center" spacing={1}> */}
         <LanguageChange />
-      </Stack> */}
+      {/* </Stack> */}
     </div>
   );
 };

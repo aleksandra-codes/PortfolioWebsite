@@ -8,7 +8,6 @@
 
 .nameHeader {
   text-transform: uppercase;
-  padding: 20px 0;
 }
 
 .subHeader {
@@ -19,4 +18,12 @@
 }
 .clickableChip:hover {
   cursor: pointer;
+  transform: scale(1.02);
+  box-shadow: 3px 1px 7px -6px rgba(0,0,0,0.84);
+  transition: 0.3s;
+}
+
+
+.clickableChip {
+  transition: 0.3s;
 }

@@ -1,19 +1,15 @@
 import { makeStyles, Typography } from "@material-ui/core";
 import { useTranslation } from "react-i18next";
 import safebike from "../images/projects_img/safebike_medium.jpg";
-import rideshare from "../images/projects_img/smartmockups_jzst7d17.png";
+import rideshare from "../images/projects_img/rideshare_app.jpeg";
 import skyline from "../images/projects_img/skyline_ziplines2.jpeg";
-import connectly from "../images/projects_img/connectly.jpeg";
+import connectly from "../images/projects_img/connectly_app.jpeg";
 import "./css/Projects.css";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import React from "react";
-import { FiFigma } from "react-icons/fi";
-import { FaReact, FaSass } from "react-icons/fa";
-import { IoLogoCss3 } from "react-icons/io";
-import { AiFillGithub, AiFillHtml5 } from "react-icons/ai";
-import { Button, Chip, Divider, Link, Paper, Stack } from "@mui/material";
-import { GoLinkExternal } from "react-icons/go";
+import { Button, Chip, Divider, Stack } from "@mui/material";
+import LogoutIcon from '@mui/icons-material/Logout';
 
 interface ProjectCard {
   src: string;
@@ -26,26 +22,6 @@ interface TabPanelProps {
   children?: React.ReactNode;
   index: number;
   value: number;
-}
-
-function TabPanel(props: TabPanelProps) {
-  const { children, value, index, ...other } = props;
-
-  return (
-    <div
-      role="tabpanel"
-      hidden={value !== index}
-      id={`simple-tabpanel-${index}`}
-      aria-labelledby={`simple-tab-${index}`}
-      {...other}
-    >
-      {value === index && (
-        <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
-        </Box>
-      )}
-    </div>
-  );
 }
 
 function a11yProps(index: number) {
@@ -61,11 +37,12 @@ const useStyles = makeStyles({
       justifyContent: "center",
     },
   },
+
+  github: {},
 });
 
 const Projects = () => {
   const { t } = useTranslation();
-  const classes = useStyles();
   const projectData: ProjectCard[] = [
     {
       src: skyline,
@@ -102,14 +79,13 @@ const Projects = () => {
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
   };
+  const classes = useStyles();
 
   return (
-    <div id="projects" className="section">
-      <div className="title">
-        <Typography variant="h4" className="title">
-          {t("projects")}
-        </Typography>
-      </div>
+    <Stack spacing={2} id="projects" className="section">
+      <Typography variant="h4" className="title">
+        {t("projects")}
+      </Typography>
       <Grid container spacing={2} direction="column">
         {projectData.map((project, index) => (
           <Grid item xs={12}>
@@ -120,7 +96,7 @@ const Projects = () => {
               justifyContent="flex-start"
               className={classes.projectContainer}
             >
-              <Grid item xs={12} md={5}>
+              <Grid item xs={12} md={5} textAlign="center">
                 <img
                   src={`${project.src}`}
                   alt={project.name}
@@ -128,34 +104,45 @@ const Projects = () => {
                   className="projectImg"
                 />
               </Grid>
-              <Grid item xs={12} md={7} className="textDescription">
-                <Typography variant="h6">{project.name}</Typography>
-                <Typography variant="subtitle1">
-                  {project.description}
-                </Typography>
-                {project.githubLink! ? (
-                  <Button
-                    href={project.githubLink}
-                    variant="contained"
-                    color="secondary"
-                  >
-                    GitHub
-                  </Button>
-                ) : null}
-                <Stack direction="row" spacing={{ xs: 1, sm: 2, md: 4 }}>
-                  {project.technologies.map((tech) => (
-                    <Chip variant="outlined" color="primary" label={tech} />
-                  ))}
+              <Grid item xs={10} md={7} className="textDescription">
+                <Stack spacing={2}>
+                  <Typography variant="h6">{project.name}</Typography>
+                  <Typography variant="subtitle1">
+                    {project.description}
+                  </Typography>
+                  <Stack direction="row" spacing={{ xs: 1, sm: 2, md: 4 }}>
+                    {project.technologies.map((tech) => (
+                      <Chip variant="outlined" color="secondary" label={tech} />
+                    ))}
+                  </Stack>
+                  <div>
+                    {project.githubLink! ? (
+                      <Chip
+                        href={project.githubLink}
+                        component="a"
+                        variant="outlined"
+                        color="primary"
+                        label={"GitHub"}
+                        className="githubLink"
+                        icon={<LogoutIcon fontSize="small" />}
+                      />
+                    ) : null}
+                  </div>
                 </Stack>
               </Grid>
             </Grid>
             {index != projectData.length - 1 ? (
-              <Divider orientation="horizontal" flexItem />
+              <Divider
+                orientation="horizontal"
+                flexItem
+                variant="middle"
+                className="projectDivider"
+              />
             ) : null}
           </Grid>
         ))}
       </Grid>
-    </div>
+    </Stack>
   );
 };
 

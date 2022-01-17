@@ -1,14 +1,14 @@
 import { makeStyles, Typography } from "@material-ui/core";
-import { Grid, useTheme } from "@mui/material";
+import { Grid, Stack, useTheme } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { AiFillGithub, AiFillHtml5 } from "react-icons/ai";
-import { FaSass } from "react-icons/fa";
+import { FaSass, FaReact } from "react-icons/fa";
 import { IoLogoCss3 } from "react-icons/io";
+import {BiGitBranch} from "react-icons/bi"
+import {SiTypescript, SiAndroid, SiJavascript, SiMaterialui, SiJirasoftware, SiAndroidstudio, SiVisualstudio, SiJava} from "react-icons/si"
 import "./css/Technologies.css";
 
-interface Skill {
-  icon: string;
-}
+interface Skill {}
 
 const Technologies = () => {
   const { t } = useTranslation();
@@ -39,10 +39,10 @@ const Technologies = () => {
   const skills = [];
 
   return (
-    <div className="section" id="technologies">
-      <div className="title">
-      <Typography variant="h4">{t("skills")}</Typography>
-      </div>
+    <Stack spacing={1} className="section" id="technologies">
+
+      <Typography variant="h6">{t("technologies")}</Typography>
+
 
       <Grid
         container
@@ -50,94 +50,115 @@ const Technologies = () => {
         alignItems="center"
         className="skillsContainer"
         spacing={3}
+        xs={12} md={10}
       >
-        <Grid item className="techBox">
+        <Grid item className="techBox" >
           <div className={`card ${classes.box}`}>
             <div className="front">
               <AiFillHtml5 />
-              {/* <Typography variant="subtitle2">HTML</Typography> */}
+              <Typography variant="subtitle2">HTML</Typography>
             </div>
           </div>
         </Grid>
+
         <Grid item className="techBox">
           <div className={`card ${classes.box}`}>
             <div className="front">
               <IoLogoCss3 />
+              <Typography variant="subtitle2">CSS</Typography>
             </div>
           </div>
         </Grid>
+
         <Grid item className="techBox">
           <div className={`card ${classes.box}`}>
             <div className="front">
               <FaSass />
+              <Typography variant="subtitle2">Sass</Typography>
+            </div>
+          </div>
+        </Grid>
+
+        <Grid item className="techBox">
+          <div className={`card ${classes.box}`}>
+            <div className="front">
+              <BiGitBranch />
+              <Typography variant="subtitle2">Git</Typography>
+            </div>
+          </div>
+        </Grid>
+
+        <Grid item className="techBox">
+          <div className={`card ${classes.box}`}>
+            <div className="front">
+              <FaReact />
+              <Typography variant="subtitle2">React</Typography>
             </div>
           </div>
         </Grid>
         <Grid item className="techBox">
           <div className={`card ${classes.box}`}>
             <div className="front">
-              <AiFillGithub />
+              <SiTypescript />
+              <Typography variant="subtitle2">Typescript</Typography>
+            </div>
+          </div>
+        </Grid>
+
+        <Grid item className="techBox">
+          <div className={`card ${classes.box}`}>
+            <div className="front">
+              <SiJavascript />
+              <Typography variant="subtitle2">Javascript</Typography>
+            </div>
+          </div>
+        </Grid>
+
+        <Grid item className="techBox">
+          <div className={`card ${classes.box}`}>
+            <div className="front">
+              <SiMaterialui />
+              <Typography variant="subtitle2">Material UI</Typography>
             </div>
           </div>
         </Grid>
         <Grid item className="techBox">
           <div className={`card ${classes.box}`}>
             <div className="front">
-              <AiFillHtml5 />
+              <SiJirasoftware />
+              <Typography variant="subtitle2">Jira</Typography>
             </div>
           </div>
         </Grid>
+
         <Grid item className="techBox">
           <div className={`card ${classes.box}`}>
             <div className="front">
-              <IoLogoCss3 />
+              <SiVisualstudio />
+              <Typography variant="subtitle2">VS Code</Typography>
             </div>
           </div>
         </Grid>
+
         <Grid item className="techBox">
           <div className={`card ${classes.box}`}>
             <div className="front">
-              <FaSass />
+              <SiAndroid />
+              <Typography variant="subtitle2">Android</Typography>
             </div>
           </div>
         </Grid>
+
         <Grid item className="techBox">
           <div className={`card ${classes.box}`}>
             <div className="front">
-              <AiFillGithub />
-            </div>
-          </div>
-        </Grid>
-        <Grid item className="techBox">
-          <div className={`card ${classes.box}`}>
-            <div className="front">
-              <AiFillHtml5 />
-            </div>
-          </div>
-        </Grid>
-        <Grid item className="techBox">
-          <div className={`card ${classes.box}`}>
-            <div className="front">
-              <IoLogoCss3 />
-            </div>
-          </div>
-        </Grid>
-        <Grid item className="techBox">
-          <div className={`card ${classes.box}`}>
-            <div className="front">
-              <FaSass />
-            </div>
-          </div>
-        </Grid>
-        <Grid item className="techBox">
-          <div className={`card ${classes.box}`}>
-            <div className="front">
-              <AiFillGithub />
+              <SiJava />
+              <Typography variant="subtitle2">Java</Typography>
             </div>
           </div>
         </Grid>
       </Grid>
-    </div>
+    </Stack>
   );
 };
 

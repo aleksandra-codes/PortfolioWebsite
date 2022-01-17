@@ -1,0 +1,13 @@
+.photo {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+}
+
+.aboutPaper {
+    padding: 1.5rem;
+}
+
+.photoGrid {
+    text-align: center;
+}

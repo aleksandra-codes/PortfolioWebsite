@@ -10,25 +10,20 @@ import Portfolio from "./sections/Portfolio";
 import Sidebar from "./sections/Sidebar";
 import RightSidebar from "./sections/RightSidebar";
 import Contact from "./sections/Contact";
+import Skills from "./sections/Skills";
 
 
 export default function SectionsPage() {
   return (
-    <Container maxWidth="md"  >
+    <Container maxWidth="md">
       <TopBar />
       <Header />
-      <Grid container spacing={2}>
-        {/* <Grid item xs={12} md={12} lg={7}> */}
         <About />
-        {/* </Grid> */}
-        {/* <Grid item xs={12} md={12} lg={5}>
-          <Technologies />
-        </Grid> */}
-      </Grid>
+      <Technologies />
       <Projects />
-      {/* <Portfolio /> */}
-      <Footer/>
-      <Sidebar/>
+  
+      <Footer />
+      <Sidebar />
       <RightSidebar />
     </Container>
   );

@@ -29,14 +29,11 @@ const Projects = () => {
       description: `${t("zipline_description")}`,
       name: "Skyline Ziplines Admin System",
       technologies: ["React Native", "Typescript"],
-      githubLink:
-        "https://github.com/SkylineZiplines/Skyline-Ziplines-Administration",
     },
     {
       description: `${t("connectly_description")}`,
       name: `${t("connectly")}`,
       src: connectly,
-      githubLink: "https://github.com/youngk313/Connectly.git",
       technologies: ["Android", "Java"],
     },
 

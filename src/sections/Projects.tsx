@@ -104,7 +104,7 @@ const Projects = () => {
                 </Stack>
               </Grid>
             </Grid>
-            {index != projectData.length - 1 ? (
+            {index !== projectData.length - 1 ? (
               <Divider
                 orientation="horizontal"
                 flexItem

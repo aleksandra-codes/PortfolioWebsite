@@ -1,19 +1,12 @@
-import { makeStyles, Slide, useScrollTrigger } from "@material-ui/core";
-import { useTranslation } from "react-i18next";
-import LanguageChange from "./LanguageChange";
-import PropTypes from "prop-types";
 import "./css/TopBar.css";
-import { Link } from "react-router-dom";
 import logo from "../images/logo.png";
 import { useContext } from "react";
 import { ModeContext } from "../context/ModeContext";
-import { IconButton, Stack } from "@mui/material";
+import { IconButton } from "@mui/material";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 
 const Navbar = () => {
-  const { t } = useTranslation();
-
   const { darkMode, setMode } = useContext(ModeContext);
 
   const toggleTheme = () => {
@@ -32,15 +25,15 @@ const Navbar = () => {
         className="logo"
       />
       {darkMode ? (
-        <IconButton onClick={toggleTheme} size="large">
-          <LightModeIcon className="modeSwitchLight" />
+        <IconButton onClick={toggleTheme}>
+          <LightModeIcon className="modeSwitchLight" fontSize="medium" />
         </IconButton>
       ) : (
         <IconButton onClick={toggleTheme}>
-          <DarkModeIcon fontSize="inherit" className="modeSwitchDark" />
+          <DarkModeIcon className="modeSwitchDark" fontSize="medium" />
         </IconButton>
       )}
-      <LanguageChange />
+      {/* <LanguageChange /> */}
     </div>
   );
 };

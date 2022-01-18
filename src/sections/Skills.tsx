@@ -12,16 +12,16 @@ const Skills = () => {
   const useStyles = makeStyles({
     box: {
       backgroundColor:
-        theme.palette.mode == "dark"
+        theme.palette.mode === "dark"
           ? theme.palette.primary.main
           : theme.palette.secondary.main,
       color:
-        theme.palette.mode == "dark"
+        theme.palette.mode === "dark"
           ? theme.palette.text.primary
           : theme.palette.secondary.contrastText,
       "&::before": {
         background:
-          theme.palette.mode == "dark"
+          theme.palette.mode === "dark"
             ? `linear-gradient(to right, ${theme.palette.primary.light}, ${theme.palette.primary.dark})}`
             : `linear-gradient(to right, ${theme.palette.secondary.light}, ${theme.palette.secondary.main})}`,
       },
@@ -38,12 +38,12 @@ const Skills = () => {
         justifyContent="center"
         alignItems="center"
         className="skillsContainer"
-        spacing={3}
+        // spacing={2}
         xs={12}
         md={12}
       >
         {skills.map((skill) => (
-          <Grid item className="techBox">
+          <Grid item>
             <div className={`card ${classes.box}`}>
               <div className="front">
                 <skill.icon />

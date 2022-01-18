@@ -1,12 +1,9 @@
-import { makeStyles, Typography } from "@material-ui/core";
+import { Typography } from "@material-ui/core";
 import { useTranslation } from "react-i18next";
 import "./css/Footer.css";
 import LinkIconButton from "../components/LinkIconButton";
 import { contactButtons } from "../data/contactButtons";
 
-const useStyles = makeStyles({
-  icon: {},
-});
 
 const Footer = () => {
   const { t } = useTranslation();

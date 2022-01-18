@@ -2,10 +2,6 @@
   font-size: 40px;
 }
 
-.techBox {
-  margin: 15px;
-}
-
 .card {
   border-radius: 5%;
 
@@ -22,6 +18,8 @@
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.4);
   position: relative;
   z-index: 1;
+
+  margin: 10px;
 }
 
 .card::before {
@@ -36,11 +34,7 @@
   opacity: 0;
   z-index: 1;
 }
-.card:hover {
-  /* transition: all .2s linear;
-    transform: scale(1.2);
-    color: #fff; */
-}
+
 .card:hover::before {
   top: -80%;
   left: -25%;

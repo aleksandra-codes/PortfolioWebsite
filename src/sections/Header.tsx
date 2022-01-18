@@ -20,7 +20,7 @@ const Header = () => {
   return (
     <div className="section" id="header">
       <Stack spacing={3} alignItems="center">
-        <Typography variant="h2" className={"nameHeader " + `${classes.name}`}>
+        <Typography variant="h2" className={`nameHeader  + ${classes.name}`}>
           {t("aleksandra")}
           <span className="accent"> {t("sorokina")}</span>
         </Typography>

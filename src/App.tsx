@@ -3,7 +3,7 @@ import NotFound from "./sections/NotFound";
 import "./i18n";
 import SectionsPage from "./SectionsPage";
 import { useEffect, useState } from "react";
-import "./App.scss"
+import "./App.css"
 import lightTheme from './themes/lightTheme' ;
 import darkTheme from './themes/darkTheme';
 import { ThemeProvider } from "@mui/material/styles";

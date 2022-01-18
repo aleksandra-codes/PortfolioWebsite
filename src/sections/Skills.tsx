@@ -1,12 +1,10 @@
 import { makeStyles, Typography } from "@material-ui/core";
-import { Grid, Stack,  useTheme } from "@mui/material";
+import { Grid, Stack, useTheme } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { skills } from "../data/skillsIcons";
-import "./css/Technologies.css";
+import "./css/Skills.css";
 
-
-
-const Technologies = () => {
+const Skills = () => {
   const { t } = useTranslation();
 
   const theme = useTheme();
@@ -32,9 +30,8 @@ const Technologies = () => {
 
   const classes = useStyles();
 
-
   return (
-    <Stack spacing={1} className="section" id="technologies">
+    <Stack spacing={1} className="section" id="skills">
       <Typography variant="h6">{t("technologies")}</Typography>
       <Grid
         container
@@ -60,4 +57,4 @@ const Technologies = () => {
   );
 };
 
-export default Technologies;
+export default Skills;

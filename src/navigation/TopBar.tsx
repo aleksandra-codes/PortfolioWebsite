@@ -11,7 +11,6 @@ import { IconButton, Stack } from "@mui/material";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 
-
 const Navbar = () => {
   const { t } = useTranslation();
 
@@ -27,13 +26,11 @@ const Navbar = () => {
 
   return (
     <div className="nav">
-      <Link to="/" className="logoLink">
-        <img
-          src={logo}
-          alt="Aleksandra Sorokina Web Developer Website"
-          className="logo"
-        />
-      </Link>
+      <img
+        src={logo}
+        alt="Aleksandra Sorokina Web Developer Website"
+        className="logo"
+      />
       {darkMode ? (
         <IconButton onClick={toggleTheme} size="large">
           <LightModeIcon className="modeSwitchLight" />

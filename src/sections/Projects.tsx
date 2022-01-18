@@ -50,7 +50,7 @@ const Projects = () => {
       src: safebike,
       description: `${t("safebike_description")}`,
       name: "Safebike",
-      technologies: ["HTML", "CSS", "Javascript"],
+      technologies: ["HTML", "CSS", "Javascript", "Bootstrap"],
       githubLink: "https://github.com/aleksandra-codes/SafeBike",
     },
   ];

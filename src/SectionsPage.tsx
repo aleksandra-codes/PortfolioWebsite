@@ -5,7 +5,7 @@ import { Container } from "@mui/material";
 import Header from "./sections/Header";
 import TopBar from "./navigation/TopBar";
 import Footer from "./sections/Footer";
-import Technologies from "./sections/Technologies";
+import Skills from "./sections/Skills";
 import Sidebar from "./sections/Sidebar";
 
 export default function SectionsPage() {
@@ -14,7 +14,7 @@ export default function SectionsPage() {
       <TopBar />
       <Header />
       <About />
-      <Technologies />
+      <Skills />
       <Projects />
       <Footer />
       <Sidebar />

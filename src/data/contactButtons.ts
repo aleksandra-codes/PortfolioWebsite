@@ -12,7 +12,7 @@ export const contactButtons: Array<LinkIconButtonProps> = [
   },
   {
     tooltip: "Resume",
-    link: "https://www.aleksandrasorokina.com/ASorokinaResume.pdf",
+    link: "https://www.aleksandrasorokina.com/asorokina_resume.pdf",
     icon: ArticleIcon,
   },
   {

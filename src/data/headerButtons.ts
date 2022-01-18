@@ -4,7 +4,7 @@ export const headerButtons = [
       label: "Projects",
     },
     {
-      link: "#",
+      link: "https://www.aleksandrasorokina.com/asorokina_resume.pdf",
       label: "Resume",
     },
     {

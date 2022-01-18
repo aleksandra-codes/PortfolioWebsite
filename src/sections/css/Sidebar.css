@@ -1,20 +1,36 @@
-#sidebar {
+.left, .right {
   display: flex;
-  flex-direction: column;
   position: fixed;
+}
+
+.left {
+  flex-direction: column;
   left: 15px;
   bottom: -10px;
 }
 
-.vl {
-  border: 0.1px solid #f4511e;
+.right {
+  flex-direction: row;
+  right: 15px;
+  bottom: -10px;
+  writing-mode: vertical-rl;
+}
+
+.left::after, .right::after{
+  content: "";
+  display: block;
+  width: 1px;
   height: 100px;
-  /* border: none; */
+  margin: 0px auto;
   background-color: #f4511e;
 }
 
+.right::after {
+  margin-top: 10px;
+}
+
 @media (max-width: 1000px) {
-  #sidebar {
+  .left, .right {
     display: none;
   }
 }

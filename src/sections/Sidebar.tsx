@@ -1,36 +1,68 @@
-import { makeStyles, Typography } from "@material-ui/core";
-import { useTranslation } from "react-i18next";
-import "./css/Footer.css";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import MailIcon from "@mui/icons-material/Mail";
-import ArticleIcon from "@mui/icons-material/Article";
 import "./css/Sidebar.css";
-import LinkIconButton, { LinkIconButtonProps } from "../components/LinkIconButton";
+import LinkIconButton, {
+  LinkIconButtonProps,
+} from "../components/LinkIconButton";
 import { contactButtons } from "../data/contactButtons";
 
-const useStyles = makeStyles({
-  icon: {},
-});
+interface SidebarProps {
+  side: string;
+  data: LinkIconButtonProps[];
+}
 
+{
+  /* <div id="rightSidebar">
+<div className="email">
+  <LinkIconButton
+    link="mailto:asorokina@my.bcit.ca?"
+    tooltip="Get in touch!"
+    text="aleksandra.codes@gmail.com"
+    className={classes.emailText}
+  />
+</div>
+<hr className="vl" />
+</div> */
+}
+const rightSidebarData = [
+  {
+    link: "mailto:asorokina@my.bcit.ca?",
+    tooltip: "Get in touch!",
+    text: "aleksandra.codes@gmail.com",
+  },
+];
 
-const Footer = () => {
-  const { t } = useTranslation();
-  const classes = useStyles();
+const sidebarData: SidebarProps[] = [
+  {
+    side: "left",
+    data: contactButtons,
+  },
+
+  {
+    side: "right email",
+    data: rightSidebarData,
+  },
+];
+
+const Sidebar = () => {
   return (
-    <div id="sidebar">
-      {contactButtons.map((button) => (
-        <LinkIconButton
-        link={button.link}
-        icon={button.icon}
-        tooltip={button.tooltip}
-        className="icon"
-        fontSize="medium"
-        />
+    <>
+      {sidebarData.map((side: SidebarProps) => (
+        <>
+          <div className={side.side}>
+            {side.data.map((button: LinkIconButtonProps) => (
+              <LinkIconButton
+                link={button.link}
+                icon={button.icon}
+                tooltip={button.tooltip}
+                text={button.text}
+                fontSize="medium"
+                className={button.className}
+              />
+            ))}
+          </div>
+        </>
       ))}
-      <hr className="vl" />
-    </div>
+    </>
   );
 };
 
-export default Footer;
+export default Sidebar;

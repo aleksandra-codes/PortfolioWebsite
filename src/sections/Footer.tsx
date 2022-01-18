@@ -21,7 +21,6 @@ const Footer = () => {
             link={button.link}
             icon={button.icon}
             tooltip={button.tooltip}
-            className="icon"
             fontSize="large"
           />
         ))}

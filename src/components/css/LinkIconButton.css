@@ -1,0 +1,9 @@
+.linkIcon {
+    margin: 10px;
+    transition: 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.linkIcon:hover {
+    transform: translateY(-3px);
+    transition: 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}

@@ -8,6 +8,7 @@ import Footer from "./sections/Footer";
 import Technologies from "./sections/Technologies";
 import Sidebar from "./sections/Sidebar";
 import RightSidebar from "./sections/RightSidebar";
+import LeftSidebar from "./sections/LeftSidebar";
 
 export default function SectionsPage() {
   return (
@@ -19,7 +20,6 @@ export default function SectionsPage() {
       <Projects />
       <Footer />
       <Sidebar />
-      <RightSidebar />
     </Container>
   );
 }

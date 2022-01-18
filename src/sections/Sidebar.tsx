@@ -1,46 +1,7 @@
 import "./css/Sidebar.css";
-import LinkIconButton, {
-  LinkIconButtonProps,
-} from "../components/LinkIconButton";
-import { contactButtons } from "../data/contactButtons";
-
-interface SidebarProps {
-  side: string;
-  data: LinkIconButtonProps[];
-}
-
-{
-  /* <div id="rightSidebar">
-<div className="email">
-  <LinkIconButton
-    link="mailto:asorokina@my.bcit.ca?"
-    tooltip="Get in touch!"
-    text="aleksandra.codes@gmail.com"
-    className={classes.emailText}
-  />
-</div>
-<hr className="vl" />
-</div> */
-}
-const rightSidebarData = [
-  {
-    link: "mailto:asorokina@my.bcit.ca?",
-    tooltip: "Get in touch!",
-    text: "aleksandra.codes@gmail.com",
-  },
-];
-
-const sidebarData: SidebarProps[] = [
-  {
-    side: "left",
-    data: contactButtons,
-  },
-
-  {
-    side: "right email",
-    data: rightSidebarData,
-  },
-];
+import LinkIconButton from "../components/LinkIconButton";
+import { LinkIconButtonProps, SidebarProps } from "../types/types";
+import { sidebarData } from "../data/sidebarData";
 
 const Sidebar = () => {
   return (

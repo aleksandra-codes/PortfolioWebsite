@@ -7,7 +7,7 @@
     "viewProjects": "View my projects",
 
 
-    "aboutme": "About Me",
+    "aboutme": "Hi There! I'm Aleksandra. A little bit about me..",
     "aboutTextOne": "I discovered an interest in technology a long time ago, but I only realised my passion towards programming after taking a Full Stack Web Development online course.",
     "aboutTextTwo": "Recognizing that my interests and talents have aligned, I decided to embark on a new career path as a software engineer - and it has been the best decision I've made so far.",
     "aboutTextThree": "Fast forward to today, and I’ve completed Computer Systems Technology program at BCIT, had the privilege of working as a Co-op Junior Software Engineer at a fintech company as well as on various projects with my peers. My main focus now is on building beautiful, responsive and user friendly applications and creating seamless user experience.",
@@ -44,7 +44,8 @@
     "safebike_description": "Created an original design for a SafeBike app. This app is created for a NPO BikeHike Adventures to connect volunteers and participants of the bike races and marathons during events. Participants can share location in order to receive help from the voluteers.",
     "rideshare_description": "Awarded 'Best Technology Solution' by the organizers of the Hack YVR hackathon. Collaborated with a team of four students to create and design a UX and UI experience of a ride sharing app for students",
     "zipline_description": "Created inspection application for a Zipline Construction company as a part of student team. Application consists of forms and reports meant to be used by safety inspectors at the Zipline locations. Application is built using React Native.",
-    "connectly_description": "Android application for virtual doctors appointments with a specific clinic that allows users to input their symptoms and sends notifications to doctors or nurses if a patient's symptoms worsen. It also allows to see clinic wait times and reminders about appointments. "
+    "connectly_description": "Android application for virtual doctors appointments with a specific clinic that allows users to input their symptoms and sends notifications to doctors or nurses if a patient's symptoms worsen. It also allows to see clinic wait times and reminders about appointments. ",
+    "built_by": " Built with ❤ by Aleksandra Sorokina."
 
 
     

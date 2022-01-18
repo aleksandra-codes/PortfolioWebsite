@@ -14,7 +14,7 @@ import { ModeContext } from "./context/ModeContext";
 
 const App = () => {
   
-  const [darkMode, setMode] = useState(false);
+  const [darkMode, setMode] = useState(true);
   useEffect(() => {
     document.title = "Aleksandra Sorokina Portfolio";
   }, []);

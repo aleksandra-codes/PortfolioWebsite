@@ -6,30 +6,11 @@ import skyline from "../images/projects_img/skyline_ziplines2.jpeg";
 import connectly from "../images/projects_img/connectly_app.jpeg";
 import "./css/Projects.css";
 import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
-import React from "react";
-import { Button, Chip, Divider, Stack } from "@mui/material";
+import { Chip, Divider, Stack } from "@mui/material";
 import LogoutIcon from '@mui/icons-material/Logout';
+import { ProjectCard } from "../types/types";
 
-interface ProjectCard {
-  src: string;
-  description: string;
-  name: string;
-  technologies: string[];
-  githubLink?: string;
-}
-interface TabPanelProps {
-  children?: React.ReactNode;
-  index: number;
-  value: number;
-}
 
-function a11yProps(index: number) {
-  return {
-    id: `simple-tab-${index}`,
-    "aria-controls": `simple-tabpanel-${index}`,
-  };
-}
 
 const useStyles = makeStyles({
   projectContainer: {
@@ -38,7 +19,6 @@ const useStyles = makeStyles({
     },
   },
 
-  github: {},
 });
 
 const Projects = () => {
@@ -74,11 +54,7 @@ const Projects = () => {
       githubLink: "https://github.com/aleksandra-codes/SafeBike",
     },
   ];
-  const [value, setValue] = React.useState(0);
 
-  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-    setValue(newValue);
-  };
   const classes = useStyles();
 
   return (

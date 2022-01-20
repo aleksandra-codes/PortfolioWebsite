@@ -9,6 +9,6 @@ export const headerButtons = [
     },
     {
       link: "https://www.linkedin.com/in/aleksandra-sorokina/",
-      label: "LinedIn",
+      label: "LinkedIn",
     },
   ];

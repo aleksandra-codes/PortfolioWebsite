@@ -52,6 +52,6 @@ export const skills: Array<Skill> = [
     },
     {
       icon: SiJava,
-      name: "Jira"
+      name: "Java"
     },
   ];

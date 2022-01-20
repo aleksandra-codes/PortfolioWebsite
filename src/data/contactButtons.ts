@@ -6,7 +6,7 @@ import { LinkIconButtonProps } from "../types/types";
 
 export const contactButtons: Array<LinkIconButtonProps> = [
   {
-    tooltip: "LinkdIn",
+    tooltip: "LinkedIn",
     link: "https://www.linkedin.com/in/aleksandra-sorokina/",
     icon: LinkedInIcon,
   },

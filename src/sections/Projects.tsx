@@ -4,6 +4,7 @@ import safebike from "../images/projects_img/safebike_medium.jpg";
 import rideshare from "../images/projects_img/rideshare_app.jpeg";
 import skyline from "../images/projects_img/skyline_ziplines2.jpeg";
 import connectly from "../images/projects_img/connectly_app.jpeg";
+import portfolio from "../images/projects_img/portfolio_mockup.jpeg";
 import "./css/Projects.css";
 import Grid from "@mui/material/Grid";
 import { Chip, Divider, Stack } from "@mui/material";
@@ -24,6 +25,13 @@ const useStyles = makeStyles({
 const Projects = () => {
   const { t } = useTranslation();
   const projectData: ProjectCard[] = [
+    {
+      src: portfolio,
+      description: `${t("portfolio_description")}`,
+      name: "Personal Portfolio",
+      technologies: ["React JS", "Typescript", "Material UI"],
+      githubLink: "https://github.com/aleksandra-codes/PortfolioWebsite",
+    },
     {
       src: skyline,
       description: `${t("zipline_description")}`,

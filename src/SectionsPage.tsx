@@ -7,6 +7,7 @@ import TopBar from "./navigation/TopBar";
 import Footer from "./sections/Footer";
 import Skills from "./sections/Skills";
 import Sidebar from "./sections/Sidebar";
+import Education from "./sections/Education";
 
 export default function SectionsPage() {
   return (
@@ -16,6 +17,7 @@ export default function SectionsPage() {
       <About />
       <Skills />
       <Projects />
+      <Education />
       <Footer />
       <Sidebar />
     </Container>

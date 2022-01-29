@@ -38,7 +38,6 @@ const Skills = () => {
         justifyContent="center"
         alignItems="center"
         className="skillsContainer"
-        // spacing={2}
         xs={12}
         md={12}
       >

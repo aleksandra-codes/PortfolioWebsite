@@ -18,7 +18,7 @@
     "getintouch": "Get in touch!",
 
 
-    "projects": "Technocal projects", 
+    "projects": "Technical projects", 
     "portfolio": "Portfolio",
 
 
@@ -41,6 +41,13 @@
     "skills": "Skills",
     "connectly": "Connectly",
     "education": "Education",
+    "bcit": "BCIT",
+    "cst": "Computer Systems Technology",
+    "udemy": "Udemy",
+    "webdesign": "Web Design for Web Developer: Build Beautiful Websites!",
+
+
+
 
     "safebike_description": "Created an original design for a SafeBike app. This app is created for a NPO BikeHike Adventures to connect volunteers and participants of the bike races and marathons during events. Participants can share location in order to receive help from the voluteers.",
     "rideshare_description": "Awarded 'Best Technology Solution' by the organizers of the Hack YVR hackathon. Collaborated with a team of four students to create and design a UX and UI experience of a ride sharing app for students",

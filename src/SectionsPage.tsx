@@ -17,7 +17,6 @@ export default function SectionsPage() {
       <About />
       <Skills />
       <Projects />
-      <Education />
       <Footer />
       <Sidebar />
     </Container>

@@ -1,32 +1,26 @@
 import { Typography } from "@material-ui/core";
 import { Grid, Stack, useTheme } from "@mui/material";
 import { useTranslation } from "react-i18next";
-import "./css/Education.css"
+import "./css/Education.css";
+
+interface EducationProps {
+  school: String;
+  date: String;
+  name: String;
+  level: String;
+}
+
 const Education = () => {
   const { t } = useTranslation();
-
   const theme = useTheme();
-
-  //   const useStyles = makeStyles({
-  //     box: {
-  //       backgroundColor:
-  //         theme.palette.mode === "dark"
-  //           ? theme.palette.primary.main
-  //           : theme.palette.secondary.main,
-  //       color:
-  //         theme.palette.mode === "dark"
-  //           ? theme.palette.text.primary
-  //           : theme.palette.secondary.contrastText,
-  //       "&::before": {
-  //         background:
-  //           theme.palette.mode === "dark"
-  //             ? `linear-gradient(to right, ${theme.palette.primary.light}, ${theme.palette.primary.dark})}`
-  //             : `linear-gradient(to right, ${theme.palette.secondary.light}, ${theme.palette.secondary.main})}`,
-  //       },
-  //     },
-  //   });
-
-  //   const classes = useStyles();
+  const educationData: EducationProps[] = [
+    {
+      school: `${t("bcit")}`,
+      date: `${t("bcit")}`,
+      name: `${t("bcit")}`,
+      level: `${t("bcit")}`,
+    },
+  ];
 
   return (
     <Stack spacing={1} className="section" id="education">
@@ -34,7 +28,13 @@ const Education = () => {
         {t("education")}
       </Typography>
       <Grid container spacing={2} direction="column">
-       
+        <Grid item>
+          {educationData.map((school) => (
+            <Grid container spacing={1} direction="column">
+              <Typography variant="subtitle1">{school.school}</Typography>
+            </Grid>
+          ))}
+        </Grid>
       </Grid>
     </Stack>
   );

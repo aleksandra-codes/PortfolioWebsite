@@ -32,7 +32,7 @@ const Header = () => {
             <Link
               href={button.link}
               rel="noopener noreferrer"
-              target="_blank"
+              target={button.target}
               underline="none"
             >
               <Chip
